@@ -8,6 +8,15 @@ A collection of small, elegant pure css spinners for website ajax and loading an
 Average size of css-spinner is 1.5KB after minimized and 0.3KB after zipped.
 
 
+Usage
+----------------
+
+1. Download the html file of desired loader
+2. copy content to your desired location for this loader.
+3. Done!
+
+Additionally, you can move the css inside the `<style>` into a standalone css file to reuse it.
+
 
 Browser Compatibility
 ----------------
