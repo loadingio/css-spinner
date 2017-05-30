@@ -1,6 +1,7 @@
 CSS-Spinner
 ================
 
+[Live Demo](https://loading.io/css/)
 
 A collection of small, elegant pure css spinners for website ajax and loading animation. All required HTML and CSS are in a single file for every single spinner, and there is no external dependency. To see what's inside, check out [the live demo on loading.io](https://loading.io/css/)
 
