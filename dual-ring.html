@@ -1,0 +1,40 @@
+<div class="lds-css">
+  <div style="width:100%;height:100%" class="lds-dual-ring">
+    <div></div>
+  </div>
+<style type="text/css">@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.lds-dual-ring {
+  position: relative;
+}
+.lds-dual-ring div {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 30px;
+  left: 30px;
+  border-radius: 50%;
+  border: 16px solid #000;
+  border-color: #ffffff transparent #ffffff transparent;
+  -webkit-animation: lds-dual-ring 1.3s linear infinite;
+  animation: lds-dual-ring 1.3s linear infinite;
+}
+</style></div>
