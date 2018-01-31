@@ -1,0 +1,28 @@
+//- module
+ballSize = size / 5
+gapSize = size / 10
+@keyframes lds-grid
+  0%, 100%
+    opacity: 1 
+  50%
+    opacity: .5
+
+.lds-grid
+  display: inline-block
+  position: relative
+  width: round(size)
+  height: round(size)
+
+.lds-grid div
+  position: absolute
+  width: round(ballSize)
+  height: round(ballSize)
+  border-radius: 50%
+  background: color.fg
+  animation(lds-grid speed linear infinite)
+
+for key in 0 1 2 3 4 5 6 7 8
+  .lds-grid div:nth-child({key + 1})
+    top: round(floor(key / 3) * (ballSize + gapSize) + gapSize)
+    left: round(floor(key % 3) * (ballSize + gapSize) + gapSize)
+    animation-delay(-1 * speed / 3 * (((key % 3) + floor(key / 3)) % 3))

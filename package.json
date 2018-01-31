@@ -19,10 +19,14 @@
   },
   "dependencies": {
     "LiveScript": ">=1.2.0",
+    "chokidar": "^1.7.0",
+    "glob": "^7.1.2",
     "jade": "=1.11.0",
-    "chokidar": "=1.7.0",
-    "stylus": "=0.50.0",
-    "uglify-js": "=3.2.0",
-    "markdown": "=0.5.0"
+    "js-yaml": "^3.10.0",
+    "markdown": "=0.5.0",
+    "pug": "^2.0.0-rc.4",
+    "sax": "^1.2.4",
+    "stylus": "=0.54.5",
+    "uglify-js": "=3.2.0"
   }
 }

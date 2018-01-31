@@ -1,24 +1,17 @@
-vendors = official
-size = 120px
-speed = 1.2s
-color = {
-  bg: #fff
-  fg: #f92
-}
-
+@import 'vars.styl'
 @import 'basic.styl'
-@import 'spinners/default/main.styl'
-@import 'spinners/grid/main.styl'
-@import 'spinners/ellipsis/main.styl'
-@import 'spinners/ripple/main.styl'
-@import 'spinners/facebook/main.styl'
-@import 'spinners/dual-ring/main.styl'
-@import 'spinners/roller/main.styl'
-@import 'spinners/heart/main.styl'
-@import 'spinners/spinner/main.styl'
-@import 'spinners/circle/main.styl'
-@import 'spinners/hourglass/main.styl'
-@import 'spinners/ring/main.styl'
+@import 'src/default/main.styl'
+@import 'src/grid/main.styl'
+@import 'src/ellipsis/main.styl'
+@import 'src/ripple/main.styl'
+@import 'src/facebook/main.styl'
+@import 'src/dual-ring/main.styl'
+@import 'src/roller/main.styl'
+@import 'src/heart/main.styl'
+@import 'src/spinner/main.styl'
+@import 'src/circle/main.styl'
+@import 'src/hourglass/main.styl'
+@import 'src/ring/main.styl'
 
 .block
   width: size
@@ -31,3 +24,5 @@ color = {
   transform: scale(1)
   display: inline-block
 
+body
+  background: #009

@@ -1,0 +1,35 @@
+//- module
+radius = size * .35
+width = size * .08
+height = size * .22
+
+@keyframes lds-spinner
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+.lds-spinner
+  color: vendors
+  display: inline-block
+  position: relative
+  width: round(size)
+  height: round(size)
+  div
+    transform-origin(round(size * .5), round(size * .5))
+    animation(lds-spinner speed linear infinite)
+  div:after
+    content: " "
+    display: block
+    position: absolute
+    top: round(size * .5 - radius - height * .5)
+    left: round(size * .5 - width * .5)
+    width: round(width)
+    height: round(height)
+    border-radius: 20%
+    background: color.fg
+
+for angle,key in 0 1 2 3 4 5 6 7 8 9 10 11
+  .lds-spinner div:nth-child({key + 1})
+    transform(rotate(angle * 30deg))
+    animation-delay(speed * -1 * (11 - key) / 12)

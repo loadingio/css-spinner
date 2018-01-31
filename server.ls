@@ -275,6 +275,26 @@ update-file = ->
   src = if it.0 != \/ => path.join(cwd,it) else it
   src = src.replace path.join(cwd,\/), ""
   [type,cmd,des] = [ftype(src), "",""]
+  if /^src\/([^/]+)/.exec(src) and !/\.html$/.exec(src) =>
+    ret = /^src\/([^/]+)/.exec(src)
+    spinner-path = "src/#{ret.1}"
+    build-path = "build/#{ret.1}"
+    mkdir-recurse build-path
+    html = pug.render fs.read-file-sync "#spinner-path/main.pug"
+    stylus([
+      fs.read-file-sync("vars.styl")toString!,
+      fs.read-file-sync("basic.styl")toString!,
+      fs.read-file-sync("#spinner-path/main.styl")toString!,
+    ].join(\\n))
+      .render (e, css) ->
+        fs.write-file-sync "#build-path/main.css", css
+        fs.write-file-sync "#build-path/main.html", html
+        fs.write-file-sync "#build-path/sample.html", """
+        <style type="text/css">
+          #css
+        </style>
+        #html
+        """
 
   if type == \other => return
   if type == \ls =>

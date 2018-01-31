@@ -1,5 +1,3 @@
-vendors = official
-
 transition()
   if index(vendors, 'ms') != null && index(vendors, 'ms') >= 0
     -ms-transition arguments
@@ -58,7 +56,7 @@ animation-delay()
   if index(vendors, 'o') != null && index(vendors, 'o') >= 0
     -o-animation-delay arguments
   if index(vendors, 'official') != null && index(vendors, 'official') >= 0
-    animation-delay arguments
+    animation-delay: arguments
 
 animation-timing-function()
   if index(vendors, 'ms') != null && index(vendors, 'ms') >= 0
