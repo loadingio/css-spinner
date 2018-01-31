@@ -4,6 +4,8 @@
 
 12 small, elegant pure css spinners collection for website ajax and loading animation. 
 
+![css spinner](https://github.com/loadingio/css-spinner/blob/master/thumbnail.gif?raw=true)
+
 
 ## Features
 
