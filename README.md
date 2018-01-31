@@ -1,27 +1,59 @@
-CSS-Spinner
-================
+# CSS-Spinner
 
 [Live Demo](https://loading.io/css/)
 
-A collection of small, elegant pure css spinners for website ajax and loading animation. All required HTML and CSS are in a single file for every single spinner, and there is no external dependency. To see what's inside, check out [the live demo on loading.io](https://loading.io/css/)
-
-Average size of css-spinner is 1.5KB after minimized and 0.3KB after zipped.
+12 small, elegant pure css spinners collection for website ajax and loading animation. 
 
 
-Usage
-----------------
+## Features
 
-1. Download the html file of desired loader
-2. copy content to your desired location for this loader.
-3. Done!
+ * vanilla - no external dependency and no additional library required.
+ * standalone - use any of them separately.
+ * customizable - use Stylus variables to quickly customize them to fit your need.
+ * easy to use - simple as copy and paste while also simple to use with pug mixins.
+ * small - average size 1K per spinner unminimized, unzipped
 
-Additionally, you can move the css inside the `<style>` into a standalone css file to reuse it.
+## Usage
+
+[loading.io](https://loading.io/css/) provides a web interface to quickly choose and copy your desired spinners, yet you can still find the source code in this repository. The simplest usage is as:
+
+1. Find and download the html file of desired loader under build/ folder.
+2. Copy its content to the place you want to use this loader.
+3. Done.
+
+Separated CSS and HTML files are also available under build folder so that you can reuse the css to reduce payload size.
+
+We also provide stylus and pug source files for better integrating these spinners into your project. Find corresponding stylus and pug files for your desired spinners under src/ folders.
+
+Additionally, you will need vars.styl and basic.styl if you are going to build by yourself. See following section for more detail.
+
+
+## Customization
+
+To customize speed and color of a loader, first ensure you have stylus install locally ( you will need npm too ):
+
+    npm install -g stylus
+
+
+then, edit vars.styl with your desired configuration. for now you can edit the following style of a spinner:
+
+ * size
+ * color
+ * speed
+
+
+once you've done with the editing, run stylus to build yourself a css file:
+
+    stylus -o . --import vars.styl --import basic.styl src/<desired-loader>/main.styl
+
+
+use the generated main.css together with build/<desired-loader>/main.html to add this loader in your project.
 
 
 Browser Compatibility
 ----------------
 
-css-spinner uses moden CSS3 technologies like CSS Animations, CSS Transformation, which are supported by all modern browsers. To support older browsers like IE9, please use [loading.io](https://loading.io/animation/icon/) to generate alternative GIF Loaders instead.
+These spinners use CSS Animation and Transformation which is wildly supported by major modern browsers except IE<=9.  To support older browsers like IE9, please use [loading.io](https://loading.io/animation/icon/) to generate alternative GIF Loaders instead.
 
 
 
@@ -31,11 +63,8 @@ License
 All loader files here are released under CC0 License. However, you could attribute to this link: [loading.io css spinner ( https://loading.io/css/ )](https://loading.io/css/) to give loading.io a thumbs-up.
 
 
-
 Other Resources
 ----------------
 
 If you want to make custom css loading animation, loading.io also provides [loading.css](https://loading.io/animation/) - A pure CSS loading animation library, and a [helper GIF builder](https://loading.io/animation/icon/). Don't forget to check it out and share your customized loader with us!
-
-
 
