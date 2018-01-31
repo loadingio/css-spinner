@@ -1,0 +1,28 @@
+{
+  "author": "loading.io",
+  "name": "css-spinner",
+  "description": "pure css loader optimized for the web",
+  "version": "0.0.1",
+  "homepage": "https://github.com/loadingio/css-spinner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loadingio/css-spinner"
+  },
+  "engines": {
+    "node": ">=0.12.6",
+    "npm": ">=1.2.2"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/lsc server.ls",
+    "restart": "node_modules\\.bin\\lsc server.ls",
+    "prepare": "npm install chokidar@1.7.0"
+  },
+  "dependencies": {
+    "LiveScript": ">=1.2.0",
+    "jade": "=1.11.0",
+    "chokidar": "=1.7.0",
+    "stylus": "=0.50.0",
+    "uglify-js": "=3.2.0",
+    "markdown": "=0.5.0"
+  }
+}

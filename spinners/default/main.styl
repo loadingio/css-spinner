@@ -1,0 +1,27 @@
+//- module
+ballSize = round(size * .1)
+radius = round((size - ballSize) * .44)
+
+@keyframes lds-default
+  0%,20%,80%,100%
+    transform(scale(1))
+  50%
+    transform(scale(1.5))
+
+.lds-default
+  width: size
+  height: size
+  position: relative
+.lds-default div
+  position: absolute
+  width: ballSize
+  height: ballSize
+  background: color.fg
+  border-radius: 50%
+  animation(lds-default speed linear infinite)
+
+for angle,index in 0deg 30deg 60deg 90deg 120deg 150deg 180deg 210deg 240deg 270deg 300deg 330deg
+  .lds-default div:nth-child({index + 1})
+    top: round((size - ballSize) * .5 + sin(-1 * angle) * radius)
+    left: round((size - ballSize) * .5 + cos(-1 * angle) * radius)
+    animation-delay(index * -1 * speed / 12)
