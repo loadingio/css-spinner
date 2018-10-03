@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loading animation</title>
+<style>
+body
+{
+    background-color:white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#a {
+    width:200px;
+    height:200px;
+    position:absolute;
+    margin:130px;
+    border-radius:0px;
+    background-color:#fff;
+    animation-name:a;
+    animation-duration:1000ms;
+    animation-iteration-count:infinite ;
+    border:2px solid #0dcecb;
+}
+#b {
+    width:100px;
+    height:100px;
+    position:absolute;
+    margin:180px;
+    border-radius:0px;
+    background-color:#0dcecb;
+    animation-name:b;
+    animation-duration:1000ms;
+    animation-iteration-count:infinite ;
+}
+@keyframes a{
+    0%{border-radius:0px;
+    transform:rotate(0deg);}
+    50%{border-radius:100px;
+    transform:rotate(180deg);}
+    100%{border-radius:0px;
+    transform:rotate(360deg);}
+}
+@keyframes b{
+    0%{border-radius:0px;
+    transform:rotate(0deg);}
+    50%{border-radius:100px;
+    transform:rotate(-180deg);}
+    100%{border-radius:0px;
+    transform:rotate(-360deg);}
+}
+         </style>
+    </head>
+    <body>
+            <p id="a"></p>
+            <p id="b"></p>
+    </body>
+</html>
