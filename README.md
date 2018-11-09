@@ -2,7 +2,7 @@
 
 [Live Demo](https://loading.io/css/)
 
-12 small, elegant pure css spinners collection for website ajax and loading animation. 
+collection of 12 small, elegant pure css spinners for your website loading animation. 
 
 ![css spinner](https://github.com/loadingio/css-spinner/blob/master/thumbnail.gif?raw=true)
 
@@ -17,17 +17,17 @@
 
 ## Usage
 
-[loading.io](https://loading.io/css/) provides a web interface to quickly choose and copy your desired spinners, yet you can still find the source code in this repository. The simplest usage is as:
+[loading.io](https://loading.io/css/) provides a [web interface](https://loading.io/css/) to quickly choose and copy your desired spinners, yet you can still find the source code in this repository. The simplest usage is as:
 
-1. Find and download the html file of desired loader under build/ folder.
+1. Find and download the html file of desired loader under [build/](https://github.com/loadingio/css-spinner/tree/master/build) folder.
 2. Copy its content to the place you want to use this loader.
 3. Done.
 
-Separated CSS and HTML files are also available under build folder so that you can reuse the css to reduce payload size.
+Separated CSS and HTML files are also available under [build](https://github.com/loadingio/css-spinner/tree/master/build) folder so that you can reuse the css to reduce payload size.
 
-We also provide stylus and pug source files for better integrating these spinners into your project. Find corresponding stylus and pug files for your desired spinners under src/ folders.
+We also provide stylus and pug source files for better integrating these spinners into your project. Find corresponding stylus and pug files for your desired spinners under [src/](https://github.com/loadingio/css-spinner/tree/master/src) folders.
 
-Additionally, you will need vars.styl and basic.styl if you are going to build by yourself. See following section for more detail.
+Additionally, you will need [vars.styl](https://github.com/loadingio/css-spinner/blob/master/vars.styl) and [basic.styl](https://github.com/loadingio/css-spinner/blob/master/basic.styl) if you are going to build by yourself. See following section for more detail.
 
 
 ## Customization
