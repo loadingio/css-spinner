@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    link(rel="stylesheet",href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+    link(rel="stylesheet",type="text/css",href="/assets/index.css")
+
+    style: :stylus
+      body { background: #eee; color: #2bf; font-size: 8px; }
+      .item { margin: 32px }
+
+  body
+    include ../../../src/mixin.pug
+    .w-50.mx-auto
+      .row
+        .col-md: .item: +lds-circle
+        .col-md: .item: +lds-dual-ring
+        .col-md: .item: +lds-facebook
+      .row
+        .col-md: .item: +lds-heart
+        .col-md: .item: +lds-ring
+        .col-md: .item: +lds-roller
+      .row
+        .col-md: .item: +lds-default
+        .col-md: .item: +lds-ellipsis
+        .col-md: .item: +lds-grid
+      .row
+        .col-md: .item: +lds-hourglass
+        .col-md: .item: +lds-ripple
+        .col-md: .item: +lds-spinner

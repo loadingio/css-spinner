@@ -1,0 +1,31 @@
+//- module
+borderSize = 4px
+
+@keyframes lds-ripple
+  0%
+    top: prec-round(size * .5) - borderSize
+    left: prec-round(size * .5) - borderSize
+    width: 0
+    height: 0
+    opacity: 1
+  100%
+    top: prec-round(size * .05) - borderSize
+    left: prec-round(size * .05) - borderSize
+    width: prec-round(size * .9)
+    height: prec-round(size * .9)
+    opacity: 0
+
+.lds-ripple
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+
+.lds-ripple div
+  position: absolute
+  border: prec-round(borderSize) solid color.fg
+  opacity: 1
+  border-radius: 50%
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite
+.lds-ripple div:nth-child(2)
+  animation-delay: -.5s

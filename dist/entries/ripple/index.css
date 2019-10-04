@@ -1,4 +1,3 @@
-<style type="text/css">
 .lds-ripple {
   display: inline-block;
   position: relative;
@@ -31,6 +30,3 @@
     opacity: 0;
   }
 }
-
-</style>
-<div class="lds-ripple"><div></div><div></div></div>

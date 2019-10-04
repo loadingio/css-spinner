@@ -1,4 +1,3 @@
-<style type="text/css">
 .lds-hourglass {
   display: inline-block;
   position: relative;
@@ -30,6 +29,3 @@
     transform: rotate(1800deg);
   }
 }
-
-</style>
-<div class="lds-hourglass"></div>

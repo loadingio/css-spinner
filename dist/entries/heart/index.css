@@ -1,4 +1,3 @@
-<style type="text/css">
 .lds-heart {
   display: inline-block;
   position: relative;
@@ -53,6 +52,3 @@
     transform: scale(0.9);
   }
 }
-
-</style>
-<div class="lds-heart"><div></div></div>

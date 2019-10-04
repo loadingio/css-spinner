@@ -1,4 +1,3 @@
-<style type="text/css">
 .lds-circle {
   display: inline-block;
   transform: translateZ(1px);
@@ -27,6 +26,3 @@
     transform: rotateY(3600deg);
   }
 }
-
-</style>
-<div class="lds-circle"><div></div></div>

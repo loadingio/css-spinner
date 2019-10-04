@@ -64,6 +64,8 @@ License
 
 All loader files here are released under CC0 License. However, you could attribute to this link: [loading.io css spinner ( https://loading.io/css/ )](https://loading.io/css/) to give loading.io a thumbs-up.
 
+Other source codes are released under MIT License.
+
 
 Other Resources
 ----------------

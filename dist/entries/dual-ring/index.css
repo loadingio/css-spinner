@@ -1,4 +1,3 @@
-<style type="text/css">
 .lds-dual-ring {
   display: inline-block;
   width: 80px;
@@ -23,6 +22,3 @@
     transform: rotate(360deg);
   }
 }
-
-</style>
-<div class="lds-dual-ring"></div>
