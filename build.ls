@@ -14,6 +14,7 @@ spinners = fs.readdir-sync \src/
 bar = progress-bar spinners.length, "Build Spinners"
 vars = fs.read-file-sync "vars.styl" .toString!
 all-css = ""
+all-pug = ""
 
 spinners.map -> 
   src = do
@@ -32,8 +33,13 @@ spinners.map ->
   fs.write-file-sync "dist/entries/#it/index.css", css
   fs.write-file-sync "dist/entries/#it/index.html", html
   fs.write-file-sync "dist/#it.html", html-css
+  all-pug += """
+  mixin lds-#it()
+  #{src.pug.split(\\n).filter(->it).map(->"  #it").join(\\n)}\n
+  """
   bar.tick!
 
 fs.write-file-sync "dist/index.css", all-css
 fs.write-file-sync "web/static/assets/index.css", all-css
+fs.write-file-sync "dist/mixin.pug", all-pug
 console.log "\nFinished."
