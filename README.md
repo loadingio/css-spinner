@@ -55,7 +55,7 @@ use the generated main.css together with build/<desired-loader>/main.html to add
 Browser Compatibility
 ----------------
 
-These spinners use CSS Animation and Transformation which is wildly supported by major modern browsers except IE<=9.  To support older browsers like IE9, please use [loading.io](https://loading.io/animation/icon/) to generate alternative GIF Loaders instead.
+These spinners use CSS Animation and Transformation which is widely supported by major modern browsers except IE<=9.  To support older browsers like IE9, please use [loading.io](https://loading.io/animation/icon/) to generate alternative GIF Loaders instead.
 
 
 
