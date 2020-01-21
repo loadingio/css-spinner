@@ -605,10 +605,10 @@
   }
 }
 .block {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background: none;
-  margin: 20px;
+  margin: 2em;
   box-shadow: 0 0px 0px rgba(0,0,0,0.2);
   border-radius: 2px;
   padding: 10px;

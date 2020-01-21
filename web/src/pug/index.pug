@@ -1,0 +1,24 @@
+doctype html
+html
+  include /mixin.pug
+  head
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+    link(rel="stylesheet",type="text/css",href="css/index.css")
+  body.text-white: .p-4
+    .text-center.py-4
+      h1.mb-0 CSS Spinner
+      div by #[a.text-white(href="https://loading.io/css") loading.io]
+    .mx-auto.my-4.py-4.d-flex.justify-content-center.flex-wrap(style="max-width:768px")
+      .block: +lds-circle
+      .block: +lds-dual-ring
+      .block: +lds-facebook
+      .block: +lds-heart
+      .block: +lds-ring
+      .block: +lds-roller
+      .block: +lds-default
+      .block: +lds-ellipsis
+      .block: +lds-grid
+      .block: +lds-hourglass
+      .block: +lds-ripple
+      .block: +lds-spinner
+    .py-4.text-center: p released under CC0-1.0 

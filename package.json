@@ -1,9 +1,10 @@
 {
   "author": "loading.io",
   "name": "css-spinner",
+  "license": "CC0-1.0",
   "description": "pure css loader optimized for the web",
   "version": "0.0.1",
-  "homepage": "https://github.com/loadingio/css-spinner",
+  "homepage": "https://loading.io/css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/loadingio/css-spinner"
@@ -13,20 +14,14 @@
     "npm": ">=1.2.2"
   },
   "scripts": {
-    "start": "node_modules/.bin/lsc server.ls",
-    "restart": "node_modules\\.bin\\lsc server.ls",
-    "prepare": "npm install chokidar@1.7.0"
+    "start": "cd web; ../node_modules/.bin/lsc ../node_modules/template/server.ls"
   },
-  "dependencies": {
+  "devDependencies": {
     "LiveScript": ">=1.2.0",
-    "chokidar": "^1.7.0",
-    "glob": "^7.1.2",
-    "jade": "=1.11.0",
-    "js-yaml": "^3.10.0",
-    "markdown": "=0.5.0",
-    "pug": "^2.0.0-rc.4",
-    "sax": "^1.2.4",
+    "pug": "^2.0.3",
     "stylus": "=0.54.5",
-    "uglify-js": "=3.2.0"
+    "template": "github:zbryikt/template#v2",
+    "uglify-js": "=3.2.0",
+    "uglifycss": "0.0.29"
   }
 }
