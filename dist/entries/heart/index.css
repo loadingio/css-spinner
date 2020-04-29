@@ -1,3 +1,9 @@
+.lds-heart,
+.lds-heart div,
+.lds-heart div:after,
+.lds-heart div:before {
+  box-sizing: border-box;
+}
 .lds-heart {
   display: inline-block;
   position: relative;
@@ -7,8 +13,8 @@
   transform-origin: 40px 40px;
 }
 .lds-heart div {
-  top: 32px;
-  left: 32px;
+  top: 28px;
+  left: 28px;
   position: absolute;
   width: 32px;
   height: 32px;

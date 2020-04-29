@@ -1,3 +1,7 @@
+.lds-grid,
+.lds-grid div {
+  box-sizing: border-box;
+}
 .lds-grid {
   display: inline-block;
   position: relative;

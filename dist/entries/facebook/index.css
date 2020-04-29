@@ -1,3 +1,7 @@
+.lds-facebook,
+.lds-facebook div {
+  box-sizing: border-box;
+}
 .lds-facebook {
   display: inline-block;
   position: relative;

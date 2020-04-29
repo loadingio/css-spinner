@@ -1,3 +1,7 @@
+.lds-circle,
+.lds-circle div {
+  box-sizing: border-box;
+}
 .lds-circle {
   display: inline-block;
   transform: translateZ(1px);
@@ -25,6 +29,10 @@
   100% {
     transform: rotateY(3600deg);
   }
+}
+.lds-default,
+.lds-default div {
+  box-sizing: border-box;
 }
 .lds-default {
   display: inline-block;
@@ -108,6 +116,10 @@
     transform: scale(1.5);
   }
 }
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
 .lds-dual-ring {
   display: inline-block;
   width: 80px;
@@ -131,6 +143,10 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.lds-ellipsis,
+.lds-ellipsis div {
+  box-sizing: border-box;
 }
 .lds-ellipsis {
   display: inline-block;
@@ -187,6 +203,10 @@
     transform: translate(24px, 0);
   }
 }
+.lds-facebook,
+.lds-facebook div {
+  box-sizing: border-box;
+}
 .lds-facebook {
   display: inline-block;
   position: relative;
@@ -222,6 +242,10 @@
     top: 24px;
     height: 32px;
   }
+}
+.lds-grid,
+.lds-grid div {
+  box-sizing: border-box;
 }
 .lds-grid {
   display: inline-block;
@@ -290,6 +314,12 @@
     opacity: 0.5;
   }
 }
+.lds-heart,
+.lds-heart div,
+.lds-heart div:after,
+.lds-heart div:before {
+  box-sizing: border-box;
+}
 .lds-heart {
   display: inline-block;
   position: relative;
@@ -299,8 +329,8 @@
   transform-origin: 40px 40px;
 }
 .lds-heart div {
-  top: 32px;
-  left: 32px;
+  top: 28px;
+  left: 28px;
   position: absolute;
   width: 32px;
   height: 32px;
@@ -344,6 +374,10 @@
     transform: scale(0.9);
   }
 }
+.lds-hourglass,
+.lds-hourglass:after {
+  box-sizing: border-box;
+}
 .lds-hourglass {
   display: inline-block;
   position: relative;
@@ -374,6 +408,10 @@
   100% {
     transform: rotate(1800deg);
   }
+}
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
 }
 .lds-ring {
   display: inline-block;
@@ -410,6 +448,10 @@
     transform: rotate(360deg);
   }
 }
+.lds-ripple,
+.lds-ripple div {
+  box-sizing: border-box;
+}
 .lds-ripple {
   display: inline-block;
   position: relative;
@@ -430,17 +472,22 @@
   0% {
     top: 36px;
     left: 36px;
-    width: 0;
-    height: 0;
+    width: 8px;
+    height: 8px;
     opacity: 1;
   }
   100% {
-    top: 0px;
-    left: 0px;
-    width: 72px;
-    height: 72px;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
     opacity: 0;
   }
+}
+.lds-roller,
+.lds-roller div,
+.lds-roller div:after {
+  box-sizing: border-box;
 }
 .lds-roller {
   display: inline-block;
@@ -525,6 +572,11 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.lds-spinner,
+.lds-spinner div,
+.lds-spinner div:after {
+  box-sizing: border-box;
 }
 .lds-spinner {
   color: official;

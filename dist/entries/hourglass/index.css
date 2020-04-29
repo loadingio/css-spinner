@@ -1,3 +1,7 @@
+.lds-hourglass,
+.lds-hourglass:after {
+  box-sizing: border-box;
+}
 .lds-hourglass {
   display: inline-block;
   position: relative;

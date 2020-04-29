@@ -1,3 +1,7 @@
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
 .lds-ring {
   display: inline-block;
   position: relative;

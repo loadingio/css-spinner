@@ -1,3 +1,7 @@
+.lds-ellipsis,
+.lds-ellipsis div {
+  box-sizing: border-box;
+}
 .lds-ellipsis {
   display: inline-block;
   position: relative;

@@ -1,3 +1,7 @@
+.lds-default,
+.lds-default div {
+  box-sizing: border-box;
+}
 .lds-default {
   display: inline-block;
   position: relative;

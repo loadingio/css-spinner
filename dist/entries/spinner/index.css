@@ -1,3 +1,8 @@
+.lds-spinner,
+.lds-spinner div,
+.lds-spinner div:after {
+  box-sizing: border-box;
+}
 .lds-spinner {
   color: official;
   display: inline-block;

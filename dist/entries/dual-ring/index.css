@@ -1,3 +1,7 @@
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
 .lds-dual-ring {
   display: inline-block;
   width: 80px;

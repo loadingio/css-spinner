@@ -1,3 +1,7 @@
+.lds-ripple,
+.lds-ripple div {
+  box-sizing: border-box;
+}
 .lds-ripple {
   display: inline-block;
   position: relative;
@@ -18,15 +22,15 @@
   0% {
     top: 36px;
     left: 36px;
-    width: 0;
-    height: 0;
+    width: 8px;
+    height: 8px;
     opacity: 1;
   }
   100% {
-    top: 0px;
-    left: 0px;
-    width: 72px;
-    height: 72px;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
     opacity: 0;
   }
 }
