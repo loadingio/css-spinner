@@ -4,52 +4,39 @@
 
 collection of 12 small, elegant pure css spinners for your website loading animation. 
 
-![css spinner](https://github.com/loadingio/css-spinner/blob/master/thumbnail.gif?raw=true)
+![css spinner](https://github.com/loadingio/css-spinner/blob/master/web/static/thumbnail.gif?raw=true)
 
 
 ## Features
 
  * vanilla - no external dependency and no additional library required.
  * standalone - use any of them separately.
- * customizable - use Stylus variables to quickly customize them to fit your need.
- * easy to use - simple as copy and paste while also simple to use with pug mixins.
+ * customizable - use Stylus variables to quickly customize them to fit your needs.
+ * easy to use - simply copy & paste while also easy to use with pug mixins.
  * small - average size 1K per spinner unminimized, unzipped
 
 ## Usage
 
-[loading.io](https://loading.io/css/) provides a [web interface](https://loading.io/css/) to quickly choose and copy your desired spinners, yet you can still find the source code in this repository. The simplest usage is as:
+[loading.io](https://loading.io/) provides a [web interface](https://loading.io/css/) to quickly choose and copy your desired spinners, yet you can still find the source code in this repository. The basic usage is as:
 
-1. Find and download the html file of desired loader under [build/](https://github.com/loadingio/css-spinner/tree/master/build) folder.
+1. Find and download the html files of desired loader under [dist](https://github.com/loadingio/css-spinner/tree/master/dist/) folder.
 2. Copy its content to the place you want to use this loader.
-3. Done.
 
-Separated CSS and HTML files are also available under [build](https://github.com/loadingio/css-spinner/tree/master/build) folder so that you can reuse the css to reduce payload size.
+Separated CSS and HTML files are also available under [build](https://github.com/loadingio/css-spinner/tree/master/dist/entries) folder for reusing CSS codes to reduce payload size.
 
 We also provide stylus and pug source files for better integrating these spinners into your project. Find corresponding stylus and pug files for your desired spinners under [src/](https://github.com/loadingio/css-spinner/tree/master/src) folders.
 
-Additionally, you will need [vars.styl](https://github.com/loadingio/css-spinner/blob/master/vars.styl) and [basic.styl](https://github.com/loadingio/css-spinner/blob/master/basic.styl) if you are going to build by yourself. See following section for more detail.
+To use stylus files alone, you will have to provide variables listed in [vars.styl](https://github.com/loadingio/css-spinner/blob/master/vars.styl).
 
 
-## Customization
+## Build
 
-To customize speed and color of a loader, first ensure you have stylus install locally ( you will need npm too ):
+You can also customize all these loaders by building them yourself.
 
-    npm install -g stylus
-
-
-then, edit vars.styl with your desired configuration. for now you can edit the following style of a spinner:
-
- * size
- * color
- * speed
-
-
-once you've done with the editing, run stylus to build yourself a css file:
-
-    stylus -o . --import vars.styl --import basic.styl src/<desired-loader>/main.styl
-
-
-use the generated main.css together with build/<desired-loader>/main.html to add this loader in your project.
+ * First, update `vars.styl` based on your needs.
+ * make sure required packages are installed by `npm install`. You will need NPM / NodeJS pre-installed.
+ * build with this command: `npm run build`
+   - generated files will be in `dist/` folder.
 
 
 Browser Compatibility
