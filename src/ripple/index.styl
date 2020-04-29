@@ -3,16 +3,16 @@ borderSize = 4px
 
 @keyframes lds-ripple
   0%
-    top: prec-round(size * .5) - borderSize
-    left: prec-round(size * .5) - borderSize
-    width: 0
-    height: 0
+    top: prec-round(size * .5 - borderSize)
+    left: prec-round(size * .5 - borderSize)
+    width: borderSize * 2
+    height: borderSize * 2
     opacity: 1
   100%
-    top: prec-round(size * .05) - borderSize
-    left: prec-round(size * .05) - borderSize
-    width: prec-round(size * .9)
-    height: prec-round(size * .9)
+    top: 0
+    left: 0
+    width: prec-round(size)
+    height: prec-round(size)
     opacity: 0
 
 .lds-ripple
