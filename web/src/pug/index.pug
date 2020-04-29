@@ -5,25 +5,37 @@ html
     link(rel="stylesheet",type="text/css",href="/assets/index.css")
 
     style: :stylus
-      body { background: #eee; color: #2bf; font-size: 8px; }
-      .item { margin: 32px }
+      html,body
+        width: 100%
+        height: 100%
+      body
+        background: linear-gradient(45deg,#eea518,#feb528)
+        background-size: cover
+        color: #fff
+        font-size: 18px
+      .item { margin: 32px auto;  width: 80px; height: 80px }
 
   body
     include ../../../src/mixin.pug
+
+    .text-center.py-4
+      h1.mb-0 CSS Spinner
+      div by #[a.text-white(href="https://loading.io/css") loading.io]
+
     .w-50.mx-auto
-      .row
-        .col-md: .item: +lds-circle
-        .col-md: .item: +lds-dual-ring
-        .col-md: .item: +lds-facebook
-      .row
-        .col-md: .item: +lds-heart
-        .col-md: .item: +lds-ring
-        .col-md: .item: +lds-roller
-      .row
-        .col-md: .item: +lds-default
-        .col-md: .item: +lds-ellipsis
-        .col-md: .item: +lds-grid
-      .row
-        .col-md: .item: +lds-hourglass
-        .col-md: .item: +lds-ripple
-        .col-md: .item: +lds-spinner
+      .row.text-center
+        .col-sm: .item: +lds-circle
+        .col-sm: .item: +lds-dual-ring
+        .col-sm: .item: +lds-facebook
+      .row.text-center
+        .col-sm: .item: +lds-heart
+        .col-sm: .item: +lds-ring
+        .col-sm: .item: +lds-roller
+      .row.text-center
+        .col-sm: .item: +lds-default
+        .col-sm: .item: +lds-ellipsis
+        .col-sm: .item: +lds-grid
+      .row.text-center
+        .col-sm: .item: +lds-hourglass
+        .col-sm: .item: +lds-ripple
+        .col-sm: .item: +lds-spinner
