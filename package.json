@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "LiveScript": ">=1.2.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "stylus": "=0.54.5",
     "template": "github:zbryikt/template#v2",
     "uglify-js": "=3.2.0",
