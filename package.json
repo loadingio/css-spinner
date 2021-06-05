@@ -1,6 +1,6 @@
 {
   "author": "loading.io",
-  "name": "css-spinner",
+  "name": "@loadingio/css-spinner",
   "license": "MIT",
   "description": "Pure CSS Loader Optimized for the Web",
   "version": "2.0.0",
