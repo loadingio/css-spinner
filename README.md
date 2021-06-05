@@ -28,6 +28,10 @@ We also provide stylus and pug source files for better integrating these spinner
 
 To use stylus files alone, you will have to provide variables listed in [vars.styl](https://github.com/loadingio/css-spinner/blob/master/vars.styl).
 
+## npm package
+
+This module is also released through npm as [@loadingio/css-spinner](https://www.npmjs.com/package/@loadingio/css-spinner).
+
 
 ## Build
 
