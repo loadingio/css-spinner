@@ -1,8 +1,11 @@
 doctype html
 html
+  include @/bootstrap.ldui/dist/index.pug
   head
-    link(rel="stylesheet",href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
-    link(rel="stylesheet",type="text/css",href="/assets/index.css")
+    +css("assets/lib/bootstrap/main/css/bootstrap.min.css")
+    +css("assets/lib/css-spinner/dev/index.css")
+    //link(rel="stylesheet",href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+    //link(rel="stylesheet",type="text/css",href="/assets/index.css")
 
     style: :stylus
       html,body
@@ -16,7 +19,7 @@ html
       .item { margin: 32px auto;  width: 80px; height: 80px }
 
   body
-    include ../../../src/mixin.pug
+    include ../../static/assets/lib/css-spinner/dev/mixin.pug
 
     .text-center.py-4
       h1.mb-0 CSS Spinner

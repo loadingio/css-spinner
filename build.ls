@@ -44,7 +44,9 @@ spinners.map ->
 all-css-min = uglifycss.processString(all-css, uglyComments: true)
 fs.write-file-sync "dist/index.css", all-css
 fs.write-file-sync "dist/index.min.css", all-css-min
-fs.write-file-sync "web/static/assets/index.css", all-css
-fs.write-file-sync "web/static/assets/index.min.css", all-css-min
 fs.write-file-sync "dist/mixin.pug", all-pug
+fs-extra.ensure-dir-sync "web/static/assets/lib/css-spinner/dev"
+fs.write-file-sync "web/static/assets/lib/css-spinner/dev/index.css", all-css
+fs.write-file-sync "web/static/assets/lib/css-spinner/dev/index.min.css", all-css-min
+fs.write-file-sync "web/static/assets/lib/css-spinner/dev/mixin.pug", all-pug
 console.log "\nFinished."

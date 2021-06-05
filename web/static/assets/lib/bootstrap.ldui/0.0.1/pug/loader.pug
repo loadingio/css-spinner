@@ -1,0 +1,26 @@
+//- load script / css without worrying about loading them multiple times.
+- if(!scriptLoader) { scriptLoader = {url: {}, config: {}}; }
+- if(!decache) { decache = (version? "?v=" + version : ""); }
+mixin script(url,config)
+  - scriptLoader.config = (config ? config : {});
+  if !scriptLoader.url[url]
+    - scriptLoader.url[url] = true;
+    if /^https?:\/\/./.exec(url)
+      script(type="text/javascript",src=url,
+      defer=!!scriptLoader.config.defer,async=!!scriptLoader.config.async)
+    else
+      script(type="text/javascript",src=url + decache,
+      defer=!!scriptLoader.config.defer,async=!!scriptLoader.config.async)
+
+- if(!cssLoader) { cssLoader = {url: {}}; }
+mixin css(url,config)
+  - cssLoader.config = (config ? config : {});
+  if !cssLoader.url[url]
+    - cssLoader.url[url] = true;
+    link(rel="stylesheet",type="text/css",href=url + decache)
+
+- if(!blockLoader) { blockLoader = {name: {}, config: {}}; }
+mixin block(name)
+  if !blockLoader.name[name]
+    - blockLoader.name[name] = true;
+    block
