@@ -35,9 +35,10 @@ spinners.map ->
   fs.write-file-sync "dist/entries/#it/index.min.css", css-min
   fs.write-file-sync "dist/entries/#it/index.html", html
   fs.write-file-sync "dist/#it.html", html-css
+  mixin-pug = src.pug.replace /^([^: ]+)([: ])/, "$1&attributes(attributes)$2"
   all-pug += """
   mixin lds-#it()
-  #{src.pug.split(\\n).filter(->it).map(->"  #it").join(\\n)}\n
+  #{mixin-pug.split(\\n).filter(->it).map(->"  #it").join(\\n)}\n
   """
   bar.tick!
 
