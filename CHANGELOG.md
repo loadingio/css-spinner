@@ -6,4 +6,4 @@
  - fix ripple and heart spinner alignment
  - add mixin.pug
  - use currentColor for spinner color
-
+ - add `style` field in package.json
