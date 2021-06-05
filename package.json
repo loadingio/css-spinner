@@ -10,20 +10,31 @@
     "url": "https://github.com/loadingio/css-spinner"
   },
   "engines": {
-    "node": ">=0.12.6",
-    "npm": ">=1.2.2"
+    "node": ">=10.14.1",
+    "npm": ">=6.4.1"
   },
   "scripts": {
-    "start": "cd web; ../node_modules/.bin/lsc ../node_modules/template/server.ls",
-    "build": "./node_modules/.bin/lsc build.ls"
+    "start": "npx server -r web -o true",
+    "build": "npx lsc build"
   },
-  "dependencies": {
-    "LiveScript": ">=1.2.0",
-    "stylus": "^0.54.5",
-    "uglify-js": "=3.2.0",
-    "uglifycss": "0.0.29",
-    "progress": "^2.0.0",
+  "devDependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap.ldui": "github:loadingio/bootstrap.ldui",
     "colors": "=1.3.3",
-    "template": "github:zbryikt/template#v2"
+    "fedep": "^0.0.12",
+    "fs-extra": "^10.0.0",
+    "livescript": "^1.6.0",
+    "progress": "^2.0.0",
+    "stylus": "^0.54.8",
+    "template": "github:zbryikt/template#v2.3.13",
+    "uglify-js": "=3.2.0",
+    "uglifycss": "^0.0.29"
+  },
+  "frontendDependencies": {
+    "root": "web/static/assets/lib",
+    "modules": [
+      "bootstrap",
+      "bootstrap.ldui"
+    ]
   }
 }
