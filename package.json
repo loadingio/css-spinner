@@ -22,11 +22,16 @@
     "build": "npx lsc build"
   },
   "devDependencies": {
+    "@loadingio/ldcolorpicker": "^2.0.2",
+    "@loadingio/ldquery": "^2.0.0",
     "bootstrap": "^4.5.2",
     "bootstrap.ldui": "github:loadingio/bootstrap.ldui",
     "colors": "=1.3.3",
     "fedep": "^0.0.12",
     "fs-extra": "^10.0.0",
+    "ldcolor": "^0.0.3",
+    "ldslider": "^2.0.6",
+    "ldview": "^0.1.1",
     "livescript": "^1.6.0",
     "progress": "^2.0.0",
     "pug": "^3.0.2",
@@ -39,7 +44,12 @@
     "root": "web/static/assets/lib",
     "modules": [
       "bootstrap",
-      "bootstrap.ldui"
+      "bootstrap.ldui",
+      "@loadingio/ldquery",
+      "ldview",
+      "@loadingio/ldcolorpicker",
+      "ldslider",
+      "ldcolor"
     ]
   }
 }
