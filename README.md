@@ -1,10 +1,10 @@
-# CSS-Spinner
+# css-spinner
 
 [Live Demo](https://loading.io/css/)
 
-collection of 12 small, elegant pure css spinners for your website loading animation. 
+Collection of 12 small, elegant pure css spinners for your website's loading animation.
 
-![css spinner](https://github.com/loadingio/css-spinner/blob/master/web/static/thumbnail.gif?raw=true)
+![css spinner](https://raw.githubusercontent.com/loadingio/css-spinner/master/web/static/thumbnail.gif)
 
 
 ## Features
@@ -39,23 +39,20 @@ You can also customize all these loaders by building them yourself.
    - generated files will be in `dist/` folder.
 
 
-Browser Compatibility
-----------------
+## Browser Compatibility
 
 These spinners use CSS Animation and Transformation which is widely supported by major modern browsers except IE<=9.  To support older browsers like IE9, please use [loading.io](https://loading.io/animation/icon/) to generate alternative GIF Loaders instead.
 
 
 
-License
-----------------
+## License
 
 All loader files here are released under CC0 License. However, you could attribute to this link: [loading.io css spinner ( https://loading.io/css/ )](https://loading.io/css/) to give loading.io a thumbs-up.
 
 Other source codes are released under MIT License.
 
 
-Other Resources
-----------------
+## Other Resources
 
 If you want to make custom css loading animation, loading.io also provides [loading.css](https://loading.io/animation/) - A pure CSS loading animation library, and a [helper GIF builder](https://loading.io/animation/icon/). Don't forget to check it out and share your customized loader with us!
 
