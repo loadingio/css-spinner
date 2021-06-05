@@ -25,6 +25,7 @@
     "fs-extra": "^10.0.0",
     "livescript": "^1.6.0",
     "progress": "^2.0.0",
+    "pug": "^3.0.2",
     "stylus": "^0.54.8",
     "template": "github:zbryikt/template#v2.3.13",
     "uglify-js": "=3.2.0",
