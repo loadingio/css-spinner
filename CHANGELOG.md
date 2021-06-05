@@ -8,3 +8,4 @@
  - add mixin.pug
  - use currentColor for spinner color
  - add `style` field in package.json
+ - support attributes in mixin
