@@ -1,0 +1,10 @@
+- prefix = function(n) { return (!n?[]:(Array.isArray(n)?n:[n])).map(function(it){ return `${prefix.currentName}$${it}`; }).join(' ');}
+mixin scope(name)
+  - var prentName = prefix.currentName;
+  - prefix.currentName = name;
+  if attributes.class && /naked-scope/.exec(attributes.class)
+    block
+  else
+    div(ld-scope=name || '')&attributes(attributes)
+      block
+  - prefix.currentName = parentName;

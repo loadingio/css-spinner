@@ -1,5 +1,9 @@
 <style type="text/css">
-  .lds-hourglass {
+.lds-hourglass,
+.lds-hourglass:after {
+  box-sizing: border-box;
+}
+.lds-hourglass {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -13,8 +17,8 @@
   height: 0;
   margin: 8px;
   box-sizing: border-box;
-  border: 32px solid #fff;
-  border-color: #fff transparent #fff transparent;
+  border: 32px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
   animation: lds-hourglass 1.2s infinite;
 }
 @keyframes lds-hourglass {

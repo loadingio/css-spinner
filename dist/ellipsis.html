@@ -1,5 +1,9 @@
 <style type="text/css">
-  .lds-ellipsis {
+.lds-ellipsis,
+.lds-ellipsis div {
+  box-sizing: border-box;
+}
+.lds-ellipsis {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -7,11 +11,11 @@
 }
 .lds-ellipsis div {
   position: absolute;
-  top: 33px;
-  width: 13px;
-  height: 13px;
+  top: 33.33333px;
+  width: 13.33333px;
+  height: 13.33333px;
   border-radius: 50%;
-  background: #fff;
+  background: currentColor;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .lds-ellipsis div:nth-child(1) {

@@ -1,0 +1,43 @@
+//- module
+mySpeed = speed * 1
+ballSize = size * .09
+radius = size * .4
+dAngle = 15deg
+oAngle = 90deg - dAngle * 8 * 0.5
+
+@keyframes lds-roller
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.lds-roller, .lds-roller div, .lds-roller div:after
+  box-sizing: border-box
+
+.lds-roller
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+
+.lds-roller div
+  animation: lds-roller mySpeed cubic-bezier(.5,0,.5,1) infinite
+  transform-origin: prec-round(size * .5) prec-round(size * .5)
+
+.lds-roller div:after
+  content: " "
+  display: block
+  position: absolute
+  width: prec-round(ballSize)
+  height: prec-round(ballSize)
+  border-radius: 50%
+  background: color.fg
+  margin: prec-round(ballSize * -.5) 0 0 prec-round(ballSize * -.5)
+
+for key in 1 2 3 4 5 6 7 8
+  .lds-roller div:nth-child({key})
+    animation-delay: -.03 * (key) * mySpeed
+
+  .lds-roller div:nth-child({key}):after
+    top: prec-round(sin(oAngle + dAngle * key) * radius + size * .5)
+    left: prec-round(cos(oAngle + dAngle * key) * radius + size * .5)

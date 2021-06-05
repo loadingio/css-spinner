@@ -1,5 +1,9 @@
 <style type="text/css">
-  .lds-facebook {
+.lds-facebook,
+.lds-facebook div {
+  box-sizing: border-box;
+}
+.lds-facebook {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -10,7 +14,7 @@
   position: absolute;
   left: 8px;
   width: 16px;
-  background: #fff;
+  background: currentColor;
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .lds-facebook div:nth-child(1) {
@@ -23,7 +27,7 @@
 }
 .lds-facebook div:nth-child(3) {
   left: 56px;
-  animation-delay: 0;
+  animation-delay: 0s;
 }
 @keyframes lds-facebook {
   0% {

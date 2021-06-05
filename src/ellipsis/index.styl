@@ -1,0 +1,52 @@
+//- module
+ballSize = size / 6
+gapSize = size / 10
+mySpeed = speed * .5
+
+.lds-ellipsis, .lds-ellipsis div
+  box-sizing: border-box
+
+.lds-ellipsis
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+
+.lds-ellipsis div
+  position: absolute
+  top: prec-round((size - ballSize) * .5)
+  width: prec-round(ballSize)
+  height: prec-round(ballSize)
+  border-radius: 50%
+  background: color.fg
+  animation-timing-function: cubic-bezier(0,1,1,0)
+.lds-ellipsis div:nth-child(1)
+  left: prec-round(gapSize)
+  animation: lds-ellipsis1 mySpeed infinite
+.lds-ellipsis div:nth-child(2)
+  left: prec-round(gapSize)
+  animation: lds-ellipsis2 mySpeed infinite
+.lds-ellipsis div:nth-child(3)
+  left: prec-round(gapSize * 4)
+  animation: lds-ellipsis2 mySpeed infinite
+.lds-ellipsis div:nth-child(4)
+  left: prec-round(gapSize * 7)
+  animation: lds-ellipsis3 mySpeed infinite
+
+@keyframes lds-ellipsis1
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(1)
+
+@keyframes lds-ellipsis3
+  0%
+    transform: scale(1)
+  100%
+    transform: scale(0)
+
+@keyframes lds-ellipsis2
+  0%
+    transform: translate(0,0)
+  100%
+    transform: translate(prec-round(gapSize * 3),0)

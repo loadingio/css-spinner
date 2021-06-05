@@ -1,5 +1,9 @@
 <style type="text/css">
-  .lds-grid {
+.lds-grid,
+.lds-grid div {
+  box-sizing: border-box;
+}
+.lds-grid {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -10,7 +14,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #fff;
+  background: currentColor;
   animation: lds-grid 1.2s linear infinite;
 }
 .lds-grid div:nth-child(1) {

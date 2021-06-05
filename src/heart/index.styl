@@ -1,0 +1,48 @@
+//- module
+@keyframes lds-heart
+  0%
+    transform: scale(.95)
+  5%
+    transform: scale(1.1)
+  39%
+    transform: scale(.85)
+  45%
+    transform: scale(1)
+  60%
+    transform: scale(.95)
+  100%
+    transform: scale(.9)
+
+.lds-heart, .lds-heart div, .lds-heart div:after, .lds-heart div:before
+  box-sizing: border-box
+
+.lds-heart
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+  transform: rotate(45deg)
+  transform-origin: prec-round(size * .5) prec-round(size * .5)
+  div
+    top: prec-round(size * .35)
+    left: prec-round(size * .35)
+    position: absolute
+    width: prec-round(size * .4)
+    height: prec-round(size * .4)
+    background: color.fg
+    animation: lds-heart speed infinite cubic-bezier(.215,.61,.355,1)
+
+  div:after, div:before
+    content: " "
+    position: absolute
+    display: block
+    width: prec-round(size * .4)
+    height: prec-round(size * .4)
+    background: color.fg
+  div:before
+    left: prec-round(size * -.3)
+    border-radius: 50% 0 0 50%
+
+  div:after 
+    top: prec-round(size * -.3)
+    border-radius: 50% 50% 0 0

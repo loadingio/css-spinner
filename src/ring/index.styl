@@ -1,0 +1,33 @@
+//- module
+delta = -.125
+@keyframes lds-ring
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.lds-ring, .lds-ring div
+  box-sizing: border-box
+
+.lds-ring
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+  div
+    box-sizing: border-box
+    display: block
+    position: absolute
+    width: prec-round(size * .8)
+    height: prec-round(size * .8)
+    margin: prec-round(size * .1)
+    border: prec-round(size * .1) solid color.fg
+    border-radius: 50%
+    animation: lds-ring speed cubic-bezier(.5,0,.5,1) infinite
+    border-color: color.fg transparent transparent transparent
+  div:nth-child(1)
+    animation-delay: delta * 3 * speed
+  div:nth-child(2)
+    animation-delay: delta * 2 * speed
+  div:nth-child(3)
+    animation-delay: delta * 1 * speed

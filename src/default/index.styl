@@ -1,0 +1,32 @@
+//- module
+ballSize = size * .08
+radius = (size - ballSize) * .4
+
+@keyframes lds-default
+  0%,20%,80%,100%
+    transform: scale(1)
+  50%
+    transform: scale(1.5)
+
+.lds-default, .lds-default div
+  box-sizing: border-box
+
+.lds-default
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+
+.lds-default div
+  position: absolute
+  width: prec-round(ballSize)
+  height: prec-round(ballSize)
+  background: color.fg
+  border-radius: 50%
+  animation: lds-default speed linear infinite
+
+for angle,key in 0deg 30deg 60deg 90deg 120deg 150deg 180deg 210deg 240deg 270deg 300deg 330deg
+  .lds-default div:nth-child({key + 1})
+    animation-delay: speed * (key * -1 / 12)
+    top: prec-round((size - ballSize) * .5 + sin(-1 * angle) * radius)
+    left: prec-round((size - ballSize) * .5 + cos(-1 * angle) * radius)

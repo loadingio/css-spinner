@@ -1,1 +1,54 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="css/index.css"></head><body class="text-white"><div class="p-4"><div class="text-center py-4"><h1 class="mb-0">CSS Spinner</h1><div>by <a class="text-white" href="https://loading.io/css">loading.io</a></div></div><div class="mx-auto my-4 py-4 d-flex justify-content-center flex-wrap" style="max-width:768px"><div class="block"><div class="lds-circle"><div></div></div></div><div class="block"><div class="lds-dual-ring"></div></div><div class="block"><div class="lds-facebook"><div></div><div></div><div></div></div></div><div class="block"><div class="lds-heart"><div></div></div></div><div class="block"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div><div class="block"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div class="block"><div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div class="block"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div><div class="block"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div class="block"><div class="lds-hourglass"></div></div><div class="block"><div class="lds-ripple"><div></div><div></div></div></div><div class="block"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div><div class="py-4 text-center"><p>released under CC0-1.0 </p></div></div></body></html>
+<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/main/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/css-spinner/dev/index.css"><link rel="stylesheet" type="text/css" href="assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/ldslider/main/ldrs.min.css"><style>html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: linear-gradient(45deg, #eea518, #feb528);
+  background-size: cover;
+  color: #fff;
+  font-size: 18px;
+}
+.item {
+  margin: 32px auto;
+  width: 80px;
+  height: 80px;
+}
+</style></head><body><div class="text-center py-4"><h1 class="mb-0">CSS Spinner</h1><div>by <a class="text-white" href="https://loading.io/css">loading.io</a></div><div class="mt-4 d-flex justify-content-center mx-auto" style="max-width:320px"><div class="mx-2 flex-grow-1"><div class="form-control form-control-sm border-0" ld="color"></div></div><div class="mx-2 flex-grow-1"><div class="ldrs sm" ld="slider"></div></div></div></div><div class="w-50 mx-auto" ld="gallery"><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner"><div class="lds-circle"><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-dual-ring"></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-facebook"><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner"><div class="lds-heart"><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner"><div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner"><div class="lds-hourglass"></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-ripple"><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div><script type="text/javascript" src="assets/lib/@loadingio/ldquery/main/ldq.min.js"></script><script type="text/javascript" src="assets/lib/ldview/main/index.min.js"></script><script type="text/javascript" src="assets/lib/ldcolor/main/ldcolor.min.js"></script><script type="text/javascript" src="assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.js"></script><script type="text/javascript" src="assets/lib/ldslider/main/ldrs.min.js"></script><script>var view;
+view = new ldview({
+  root: document.body,
+  initRender: false,
+  init: {
+    color: function(arg$){
+      var node, ldcp;
+      node = arg$.node;
+      ldcp = new ldcolorpicker(node);
+      ldcp.on('change', function(it){
+        node.style.background = ldcolor.web(it);
+        return view.get('gallery').style.color = ldcolor.web(it);
+      });
+      return node.style.background = ldcolor.web(ldcp.getColor());
+    },
+    slider: function(arg$){
+      var node, ldrs;
+      node = arg$.node;
+      ldrs = new ldslider({
+        root: node,
+        min: 0.1,
+        max: 1,
+        step: 0.01,
+        from: 1
+      });
+      return ldrs.on('change', function(v){
+        return view.getAll('spinner').map(function(it){
+          return it.style.transform = "scale(" + v + ")";
+        });
+      });
+    }
+  },
+  handler: {
+    colorbox: function(){},
+    gallery: function(){}
+  }
+});
+view.render();</script></body></html>

@@ -1,5 +1,10 @@
 <style type="text/css">
-  .lds-spinner {
+.lds-spinner,
+.lds-spinner div,
+.lds-spinner div:after {
+  box-sizing: border-box;
+}
+.lds-spinner {
   color: official;
   display: inline-block;
   position: relative;
@@ -14,12 +19,12 @@
   content: " ";
   display: block;
   position: absolute;
-  top: 3px;
-  left: 37px;
-  width: 6px;
-  height: 18px;
+  top: 3.2px;
+  left: 36.8px;
+  width: 6.4px;
+  height: 17.6px;
   border-radius: 20%;
-  background: #fff;
+  background: currentColor;
 }
 .lds-spinner div:nth-child(1) {
   transform: rotate(0deg);

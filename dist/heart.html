@@ -1,5 +1,11 @@
 <style type="text/css">
-  .lds-heart {
+.lds-heart,
+.lds-heart div,
+.lds-heart div:after,
+.lds-heart div:before {
+  box-sizing: border-box;
+}
+.lds-heart {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -8,12 +14,12 @@
   transform-origin: 40px 40px;
 }
 .lds-heart div {
-  top: 32px;
-  left: 32px;
+  top: 28px;
+  left: 28px;
   position: absolute;
   width: 32px;
   height: 32px;
-  background: #fff;
+  background: currentColor;
   animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .lds-heart div:after,
@@ -23,7 +29,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  background: #fff;
+  background: currentColor;
 }
 .lds-heart div:before {
   left: -24px;

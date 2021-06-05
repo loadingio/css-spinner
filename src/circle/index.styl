@@ -1,0 +1,27 @@
+//- module
+@keyframes lds-circle
+  0%, 100%
+    animation-timing-function: cubic-bezier(.5,0,1,.5)
+  0%
+    transform: rotateY(0deg)
+  50%
+    transform: rotateY(1800deg)
+    animation-timing-function: cubic-bezier(0,.5,.5,1)
+  100%
+    transform: rotateY(3600deg)
+
+.lds-circle, .lds-circle div
+  box-sizing: border-box
+
+.lds-circle
+  display: inline-block
+  transform: translateZ(1px)
+
+.lds-circle > div
+  display: inline-block
+  width: prec-round(size * .8)
+  height: prec-round(size * .8)
+  margin: prec-round(size * .1)
+  background: color.fg
+  border-radius: 50%
+  animation: lds-circle (speed * 2) cubic-bezier(0,.2,.8,1) infinite

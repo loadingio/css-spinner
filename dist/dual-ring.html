@@ -1,5 +1,9 @@
 <style type="text/css">
-  .lds-dual-ring {
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
+.lds-dual-ring {
   display: inline-block;
   width: 80px;
   height: 80px;
@@ -11,8 +15,8 @@
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #fff;
-  border-color: #fff transparent #fff transparent;
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {

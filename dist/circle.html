@@ -1,11 +1,19 @@
 <style type="text/css">
-  .lds-circle {
+.lds-circle,
+.lds-circle div {
+  box-sizing: border-box;
+}
+.lds-circle {
+  display: inline-block;
+  transform: translateZ(1px);
+}
+.lds-circle > div {
   display: inline-block;
   width: 64px;
   height: 64px;
   margin: 8px;
+  background: currentColor;
   border-radius: 50%;
-  background: #fff;
   animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 @keyframes lds-circle {
@@ -25,4 +33,4 @@
 }
 
 </style>
-<div class="lds-circle"></div>
+<div class="lds-circle"><div></div></div>

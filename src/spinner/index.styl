@@ -1,0 +1,38 @@
+//- module
+radius = size * .35
+width = size * .08
+height = size * .22
+
+@keyframes lds-spinner
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+.lds-spinner, .lds-spinner div, .lds-spinner div:after
+  box-sizing: border-box
+
+.lds-spinner
+  color: vendors
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+  div
+    transform-origin: prec-round(size * .5) prec-round(size * .5)
+    animation: lds-spinner speed linear infinite
+  div:after
+    content: " "
+    display: block
+    position: absolute
+    top: prec-round(size * .5 - radius - height * .5)
+    left: prec-round(size * .5 - width * .5)
+    width: prec-round(width)
+    height: prec-round(height)
+    border-radius: 20%
+    background: color.fg
+
+for angle,key in 0 1 2 3 4 5 6 7 8 9 10 11
+  .lds-spinner div:nth-child({key + 1})
+    transform: rotate(angle * 30deg)
+    animation-delay: speed * (-1 * (11 - key) / 12)

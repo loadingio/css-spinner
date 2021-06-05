@@ -1,0 +1,31 @@
+//- module
+@keyframes lds-hourglass
+  0%
+    transform: rotate(0)
+    animation-timing-function: cubic-bezier(.55,.055,.675,.19)
+  50%
+    transform: rotate(900deg)
+    animation-timing-function: cubic-bezier(.215,.61,.355,1)
+  100%
+    transform: rotate(1800deg)
+
+.lds-hourglass, .lds-hourglass:after
+  box-sizing: border-box
+
+.lds-hourglass
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+
+.lds-hourglass:after
+  content: " "
+  display: block
+  border-radius: 50%
+  width: 0
+  height: 0
+  margin: prec-round(size * .1)
+  box-sizing: border-box
+  border: prec-round(size * .4) solid color.fg
+  border-color: color.fg transparent color.fg transparent
+  animation: lds-hourglass speed infinite

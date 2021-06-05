@@ -1,0 +1,38 @@
+//- module
+
+barWidth = size / 5
+gapSize = size / 10
+
+@keyframes lds-facebook
+  0%
+    top: prec-round(size * .1)
+    height: prec-round(size * .8)
+  50%, 100%
+    top: prec-round(size * .3)
+    height: prec-round(size * .4)
+
+.lds-facebook, .lds-facebook div
+  box-sizing: border-box
+
+.lds-facebook
+  display: inline-block
+  position: relative
+  width: prec-round(size)
+  height: prec-round(size)
+
+.lds-facebook div
+  display: inline-block
+  position: absolute
+  left: prec-round(gapSize)
+  width: prec-round(barWidth)
+  background: color.fg
+  animation: lds-facebook speed cubic-bezier(0,.5,.5,1) infinite
+.lds-facebook div:nth-child(1)
+  left: prec-round(gapSize * 1)
+  animation-delay: -0.2 * speed
+.lds-facebook div:nth-child(2)
+  left: prec-round(gapSize * 4)
+  animation-delay: -0.1 * speed
+.lds-facebook div:nth-child(3)
+  left: prec-round(gapSize * 7)
+  animation-delay: 0s
