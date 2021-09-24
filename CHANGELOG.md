@@ -1,5 +1,12 @@
 # Change Logs
 
+# v2.0.1 (upcoming)
+
+ - add missing `vars.styl` and ensure build pass
+ - fix typo in `spinner` about color ( incorrectly set to `vendors`, which should be `color.fg` )
+ - fix incorrect paths in `mixin.pug`
+
+
 # v2.0.0
 
  - rename `css-spinner` to `@loadingio/css-spinner` since the old name conflicts.

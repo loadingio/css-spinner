@@ -579,7 +579,7 @@
   box-sizing: border-box;
 }
 .lds-spinner {
-  color: official;
+  color: currentColor;
   display: inline-block;
   position: relative;
   width: 80px;
