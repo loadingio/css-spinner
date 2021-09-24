@@ -1,6 +1,6 @@
 # Change Logs
 
-# v2.0.1 (upcoming)
+# v2.0.1
 
  - add missing `vars.styl` and ensure build pass
  - fix typo in `spinner` about color ( incorrectly set to `vendors`, which should be `color.fg` )
