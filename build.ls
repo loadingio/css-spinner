@@ -1,4 +1,4 @@
-require! <[fs fs-extra progress colors stylus pug uglifycss]>
+require! <[fs fs-extra path progress colors stylus pug uglifycss]>
 
 console.log "Build all CSS-spinners..."
 
@@ -42,12 +42,15 @@ spinners.map ->
   """
   bar.tick!
 
+weblib = "web/static/assets/lib/@loadingio/css-spinner/dev"
 all-css-min = uglifycss.processString(all-css, uglyComments: true)
 fs.write-file-sync "dist/index.css", all-css
 fs.write-file-sync "dist/index.min.css", all-css-min
 fs.write-file-sync "dist/mixin.pug", all-pug
-fs-extra.ensure-dir-sync "web/static/assets/lib/css-spinner/dev"
-fs.write-file-sync "web/static/assets/lib/css-spinner/dev/index.css", all-css
-fs.write-file-sync "web/static/assets/lib/css-spinner/dev/index.min.css", all-css-min
-fs.write-file-sync "web/static/assets/lib/css-spinner/dev/mixin.pug", all-pug
+fs-extra.ensure-dir-sync weblib
+fs.write-file-sync path.join(weblib, "index.css"), all-css
+fs.write-file-sync path.join(weblib, "index.min.css"), all-css-min
+fs.write-file-sync path.join(weblib, "mixin.pug"), all-pug
+fs-extra.remove-sync path.join(weblib, "entries")
+fs-extra.copy-sync "dist/entries", path.join(weblib, "entries")
 console.log "\nFinished."
