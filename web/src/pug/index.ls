@@ -1,6 +1,6 @@
 <-(->it.apply {}) _
 mgr = new block.manager {
-  registry: ({name,version,path,type}) -> "/assets/lib/@loadingio/css-spinner/dev/entries/#name/#path"
+  registry: ({name,version,path,type}) -> "/assets/lib/@loadingio/css-spinner/dev/#name.html"
 }
 mgr.init!
   .then ~>

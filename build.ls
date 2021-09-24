@@ -1,5 +1,8 @@
 require! <[fs fs-extra path progress colors stylus pug uglifycss]>
 
+weblib = "web/static/assets/lib/@loadingio/css-spinner/dev"
+fs-extra.ensure-dir-sync weblib
+
 console.log "Build all CSS-spinners..."
 
 progress-bar = (total = 10, text = "converting") ->
@@ -35,6 +38,7 @@ spinners.map ->
   fs.write-file-sync "dist/entries/#it/index.min.css", css-min
   fs.write-file-sync "dist/entries/#it/index.html", html
   fs.write-file-sync "dist/#it.html", html-css
+  fs.write-file-sync path.join(weblib, "#it.html"), "<div>#html-css</div>"
   mixin-pug = src.pug.replace /^([^: ]+)([: ])/, "$1&attributes(attributes)$2"
   all-pug += """
   mixin lds-#it()
@@ -42,12 +46,10 @@ spinners.map ->
   """
   bar.tick!
 
-weblib = "web/static/assets/lib/@loadingio/css-spinner/dev"
 all-css-min = uglifycss.processString(all-css, uglyComments: true)
 fs.write-file-sync "dist/index.css", all-css
 fs.write-file-sync "dist/index.min.css", all-css-min
 fs.write-file-sync "dist/mixin.pug", all-pug
-fs-extra.ensure-dir-sync weblib
 fs.write-file-sync path.join(weblib, "index.css"), all-css
 fs.write-file-sync path.join(weblib, "index.min.css"), all-css-min
 fs.write-file-sync path.join(weblib, "mixin.pug"), all-pug
