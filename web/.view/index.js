@@ -561,17 +561,25 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv
 ;pug_debug_line = 46;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_mixins["script"]("assets/lib/@loadingio/ldquery/main/ldq.min.js");
 ;pug_debug_line = 47;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_mixins["script"]("assets/lib/ldview/main/index.min.js");
+pug_mixins["script"]("assets/lib/proxise/main/proxise.min.js");
 ;pug_debug_line = 48;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_mixins["script"]("assets/lib/ldcolor/main/ldcolor.min.js");
+pug_mixins["script"]("assets/lib/@plotdb/rescope/main/rescope.min.js");
 ;pug_debug_line = 49;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_mixins["script"]("assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.js");
+pug_mixins["script"]("assets/lib/@plotdb/csscope/main/csscope.min.js");
 ;pug_debug_line = 50;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_mixins["script"]("assets/lib/@plotdb/block/main/block.min.js");
+;pug_debug_line = 51;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_mixins["script"]("assets/lib/ldview/main/index.min.js");
+;pug_debug_line = 52;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_mixins["script"]("assets/lib/ldcolor/main/ldcolor.min.js");
+;pug_debug_line = 53;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_mixins["script"]("assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.js");
+;pug_debug_line = 54;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_mixins["script"]("assets/lib/ldslider/main/ldrs.min.js");
-;pug_debug_line = 51;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 55;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript\u003E";
-;pug_debug_line = 51;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "var view;\nview = new ldview({\n  root: document.body,\n  initRender: false,\n  init: {\n    color: function(arg$){\n      var node, ldcp;\n      node = arg$.node;\n      ldcp = new ldcolorpicker(node);\n      ldcp.on('change', function(it){\n        node.style.background = ldcolor.web(it);\n        return view.get('gallery').style.color = ldcolor.web(it);\n      });\n      return node.style.background = ldcolor.web(ldcp.getColor());\n    },\n    slider: function(arg$){\n      var node, ldrs;\n      node = arg$.node;\n      ldrs = new ldslider({\n        root: node,\n        min: 0.1,\n        max: 1,\n        step: 0.01,\n        from: 1\n      });\n      return ldrs.on('change', function(v){\n        return view.getAll('spinner').map(function(it){\n          return it.style.transform = \"scale(\" + v + \")\";\n        });\n      });\n    }\n  },\n  handler: {\n    colorbox: function(){},\n    gallery: function(){}\n  }\n});\nview.render();\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
+;pug_debug_line = 55;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "var mgr;\nmgr = new block.manager({\n  registry: function(arg$){\n    var name, version, path, type;\n    name = arg$.name, version = arg$.version, path = arg$.path, type = arg$.type;\n    return \"\u002Fassets\u002Flib\u002F@loadingio\u002Fcss-spinner\u002Fdev\u002Fentries\u002F\" + name;\n  }\n});\nmgr.init().then(function(){\n  var view;\n  view = new ldview({\n    root: document.body,\n    initRender: false,\n    action: {\n      click: {\n        spinner: function(){\n          return console.log('ok123');\n        }\n      }\n    },\n    init: {\n      color: function(arg$){\n        var node, ldcp;\n        node = arg$.node;\n        ldcp = new ldcolorpicker(node);\n        ldcp.on('change', function(it){\n          node.style.background = ldcolor.web(it);\n          return view.get('gallery').style.color = ldcolor.web(it);\n        });\n        return node.style.background = ldcolor.web(ldcp.getColor());\n      },\n      slider: function(arg$){\n        var node, ldrs;\n        node = arg$.node;\n        ldrs = new ldslider({\n          root: node,\n          min: 0.1,\n          max: 1,\n          step: 0.01,\n          from: 1\n        });\n        return ldrs.on('change', function(v){\n          return view.getAll('spinner').map(function(it){\n            return it.style.transform = \"scale(\" + v + \")\";\n          });\n        });\n      }\n    },\n    handler: {\n      colorbox: function(){},\n      gallery: function(){}\n    }\n  });\n  return view.render();\n});\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
     }.call(this, "JSON" in locals_for_with ?
         locals_for_with.JSON :
         typeof JSON !== 'undefined' ? JSON : undefined, "b64img" in locals_for_with ?
