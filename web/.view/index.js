@@ -502,7 +502,7 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 39;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv class=\"col-sm\"\u003E";
 ;pug_debug_line = 39;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv class=\"item\" ld=\"spinner\" data-name=\"ring\"\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"item\" ld=\"spinner\" data-name=\"dual-ring\"\u003E";
 ;pug_debug_line = 39;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_mixins["lds-dual-ring"]();
 pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";

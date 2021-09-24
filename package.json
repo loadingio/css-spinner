@@ -21,7 +21,7 @@
     "@loadingio/bootstrap.ext": "^0.0.1",
     "@loadingio/ldcolorpicker": "^2.0.2",
     "@loadingio/ldquery": "^2.1.0",
-    "@plotdb/block": "^2.0.6",
+    "@plotdb/block": "^2.0.7",
     "@plotdb/csscope": "^2.0.0",
     "@plotdb/rescope": "^3.0.0",
     "@zbryikt/template": "^2.3.18",
