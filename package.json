@@ -18,8 +18,8 @@
     "npm": ">=6.4.1"
   },
   "scripts": {
-    "start": "npx server -r web -o true",
-    "build": "npx lsc build"
+    "start": "./node_modules/.bin/server -r web -o true",
+    "build": "./node_modules/.bin/lsc build.ls"
   },
   "devDependencies": {
     "@loadingio/ldcolorpicker": "^2.0.2",
