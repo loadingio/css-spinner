@@ -50,6 +50,7 @@
       "@plotdb/block",
       "@plotdb/rescope",
       "@plotdb/csscope",
+      "proxise",
       "ldview",
       "ldslider",
       "ldcolor"
