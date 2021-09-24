@@ -1,12 +1,26 @@
-mgr = new block.manager registry: ({name,version,path,type}) -> "/assets/lib/@loadingio/css-spinner/dev/entries/#name"
+<-(->it.apply {}) _
+mgr = new block.manager {
+  registry: ({name,version,path,type}) -> "/assets/lib/@loadingio/css-spinner/dev/entries/#name/#path"
+}
 mgr.init!
-  .then ->
+  .then ~>
 
     view = new ldview do
       root: document.body
       init-render: false
       action: click:
-        spinner: -> console.log \ok123
+        spinner: ({node}) ~>
+          name = node.getAttribute(\data-name)
+          @ldcv.toggle true
+            .then ->
+              mgr.get({name: name, version: 'master', path: 'index.html'})
+            .then (bc) ~> bc.create {}
+            .then (bi) ~>
+              if @bi => @bi.detach!
+              @bi = bi
+              root = view.get('preview')
+              root.innHTML = ''
+              bi.attach {root: view.get('preview')}
       init:
         color: ({node}) ->
           ldcp = new ldcolorpicker node
@@ -21,3 +35,4 @@ mgr.init!
       handler: colorbox: (->), gallery: (->)
     view.render!
 
+    @ldcv = new ldcover root: view.get('ldcv')

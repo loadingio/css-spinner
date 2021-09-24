@@ -3,22 +3,29 @@ html
   include @/@loadingio/bootstrap.ext/dist/index.pug
   head
     +css("assets/lib/bootstrap/main/css/bootstrap.min.css")
-    +css("assets/lib/css-spinner/dev/index.css")
+    +css("assets/lib/@loadingio/css-spinner/dev/index.css")
     +css("assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.css")
     +css("assets/lib/ldslider/main/ldrs.min.css")
+    +css("assets/lib/ldcover/main/ldcv.min.css")
     style: :stylus
       html,body
         width: 100%
         height: 100%
       body
-        background: linear-gradient(45deg,#eea518,#feb528)
+        background: linear-gradient(45deg,#2e3568,#3e7588)
         background-size: cover
         color: #fff
         font-size: 18px
-      .item { margin: 32px auto;  width: 80px; height: 80px }
+      .item { margin: 32px auto;  width: 80px; height: 80px; cursor: pointer }
 
   body
-    include ../../static/assets/lib/css-spinner/dev/mixin.pug
+    include @static/assets/lib/@loadingio/css-spinner/dev/mixin.pug
+    .ldcv.default-size(ld="ldcv"): .base: .inner.p-4.bg-dark
+      .d-flex.w-100.h-100.flex-column
+        .text-center load with @plotdb/block
+        .flex-grow-1: .w-100.h-100.d-flex.align-items-center.justify-content-center(ld="preview")
+        .d-flex.justify-content-end
+          .btn.btn-primary(data-ldcv-set="") Close
 
     .text-center.py-4
       h1.mb-0 CSS Spinner
@@ -28,21 +35,21 @@ html
         .mx-2.flex-grow-1: .ldrs.sm(ld="slider")
     .w-50.mx-auto(ld="gallery")
       .row.text-center
-        .col-sm: .item(ld="spinner"): +lds-circle
-        .col-sm: .item(ld="spinner"): +lds-dual-ring
-        .col-sm: .item(ld="spinner"): +lds-facebook
+        .col-sm: .item(ld="spinner",data-name="circle"): +lds-circle
+        .col-sm: .item(ld="spinner",data-name="ring"): +lds-dual-ring
+        .col-sm: .item(ld="spinner",data-name="facebook"): +lds-facebook
       .row.text-center
-        .col-sm: .item(ld="spinner"): +lds-heart
-        .col-sm: .item(ld="spinner"): +lds-ring
-        .col-sm: .item(ld="spinner"): +lds-roller
+        .col-sm: .item(ld="spinner",data-name="heart"): +lds-heart
+        .col-sm: .item(ld="spinner",data-name="ring"): +lds-ring
+        .col-sm: .item(ld="spinner",data-name="roller"): +lds-roller
       .row.text-center
-        .col-sm: .item(ld="spinner"): +lds-default
-        .col-sm: .item(ld="spinner"): +lds-ellipsis
-        .col-sm: .item(ld="spinner"): +lds-grid
+        .col-sm: .item(ld="spinner",data-name="default"): +lds-default
+        .col-sm: .item(ld="spinner",data-name="ellipsis"): +lds-ellipsis
+        .col-sm: .item(ld="spinner",data-name="grid"): +lds-grid
       .row.text-center
-        .col-sm: .item(ld="spinner"): +lds-hourglass
-        .col-sm: .item(ld="spinner"): +lds-ripple
-        .col-sm: .item(ld="spinner"): +lds-spinner
+        .col-sm: .item(ld="spinner",data-name="hourglass"): +lds-hourglass
+        .col-sm: .item(ld="spinner",data-name="ripple"): +lds-ripple
+        .col-sm: .item(ld="spinner",data-name="spinner"): +lds-spinner
     +script("assets/lib/@loadingio/ldquery/main/ldq.min.js")
     +script("assets/lib/proxise/main/proxise.min.js")
     +script("assets/lib/@plotdb/rescope/main/rescope.min.js")
@@ -51,5 +58,6 @@ html
     +script("assets/lib/ldview/main/index.min.js")
     +script("assets/lib/ldcolor/main/ldcolor.min.js")
     +script("assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.js")
+    +script("assets/lib/ldcover/main/ldcv.min.js")
     +script("assets/lib/ldslider/main/ldrs.min.js")
     script: include:lsc index.ls

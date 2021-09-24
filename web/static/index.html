@@ -1,10 +1,10 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/main/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/css-spinner/dev/index.css"><link rel="stylesheet" type="text/css" href="assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/ldslider/main/ldrs.min.css"><style>html,
+<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/main/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/@loadingio/css-spinner/dev/index.css"><link rel="stylesheet" type="text/css" href="assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/ldslider/main/ldrs.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/ldcover/main/ldcv.min.css"><style>html,
 body {
   width: 100%;
   height: 100%;
 }
 body {
-  background: linear-gradient(45deg, #eea518, #feb528);
+  background: linear-gradient(45deg, #2e3568, #3e7588);
   background-size: cover;
   color: #fff;
   font-size: 18px;
@@ -13,59 +13,89 @@ body {
   margin: 32px auto;
   width: 80px;
   height: 80px;
+  cursor: pointer;
 }
-</style></head><body><div class="text-center py-4"><h1 class="mb-0">CSS Spinner</h1><div>by <a class="text-white" href="https://loading.io/css">loading.io</a></div><div class="mt-4 d-flex justify-content-center mx-auto" style="max-width:320px"><div class="mx-2 flex-grow-1"><div class="form-control form-control-sm border-0" ld="color"></div></div><div class="mx-2 flex-grow-1"><div class="ldrs sm" ld="slider"></div></div></div></div><div class="w-50 mx-auto" ld="gallery"><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner"><div class="lds-circle"><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-dual-ring"></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-facebook"><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner"><div class="lds-heart"><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner"><div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner"><div class="lds-hourglass"></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-ripple"><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div><script type="text/javascript" src="assets/lib/@loadingio/ldquery/main/ldq.min.js"></script><script type="text/javascript" src="assets/lib/proxise/main/proxise.min.js"></script><script type="text/javascript" src="assets/lib/@plotdb/rescope/main/rescope.min.js"></script><script type="text/javascript" src="assets/lib/@plotdb/csscope/main/csscope.min.js"></script><script type="text/javascript" src="assets/lib/@plotdb/block/main/block.min.js"></script><script type="text/javascript" src="assets/lib/ldview/main/index.min.js"></script><script type="text/javascript" src="assets/lib/ldcolor/main/ldcolor.min.js"></script><script type="text/javascript" src="assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.js"></script><script type="text/javascript" src="assets/lib/ldslider/main/ldrs.min.js"></script><script>var mgr;
-mgr = new block.manager({
-  registry: function(arg$){
-    var name, version, path, type;
-    name = arg$.name, version = arg$.version, path = arg$.path, type = arg$.type;
-    return "/assets/lib/@loadingio/css-spinner/dev/entries/" + name;
-  }
-});
-mgr.init().then(function(){
-  var view;
-  view = new ldview({
-    root: document.body,
-    initRender: false,
-    action: {
-      click: {
-        spinner: function(){
-          return console.log('ok123');
-        }
-      }
-    },
-    init: {
-      color: function(arg$){
-        var node, ldcp;
-        node = arg$.node;
-        ldcp = new ldcolorpicker(node);
-        ldcp.on('change', function(it){
-          node.style.background = ldcolor.web(it);
-          return view.get('gallery').style.color = ldcolor.web(it);
-        });
-        return node.style.background = ldcolor.web(ldcp.getColor());
-      },
-      slider: function(arg$){
-        var node, ldrs;
-        node = arg$.node;
-        ldrs = new ldslider({
-          root: node,
-          min: 0.1,
-          max: 1,
-          step: 0.01,
-          from: 1
-        });
-        return ldrs.on('change', function(v){
-          return view.getAll('spinner').map(function(it){
-            return it.style.transform = "scale(" + v + ")";
-          });
-        });
-      }
-    },
-    handler: {
-      colorbox: function(){},
-      gallery: function(){}
+</style></head><body><div class="ldcv default-size" ld="ldcv"><div class="base"><div class="inner p-4 bg-dark"><div class="d-flex w-100 h-100 flex-column"><div class="text-center">load with @plotdb/block</div><div class="flex-grow-1"><div class="w-100 h-100 d-flex align-items-center justify-content-center" ld="preview"></div></div><div class="d-flex justify-content-end"><div class="btn btn-primary" data-ldcv-set="">Close</div></div></div></div></div></div><div class="text-center py-4"><h1 class="mb-0">CSS Spinner</h1><div>by <a class="text-white" href="https://loading.io/css">loading.io</a></div><div class="mt-4 d-flex justify-content-center mx-auto" style="max-width:320px"><div class="mx-2 flex-grow-1"><div class="form-control form-control-sm border-0" ld="color"></div></div><div class="mx-2 flex-grow-1"><div class="ldrs sm" ld="slider"></div></div></div></div><div class="w-50 mx-auto" ld="gallery"><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner" data-name="circle"><div class="lds-circle"><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner" data-name="ring"><div class="lds-dual-ring"></div></div></div><div class="col-sm"><div class="item" ld="spinner" data-name="facebook"><div class="lds-facebook"><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner" data-name="heart"><div class="lds-heart"><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner" data-name="ring"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner" data-name="roller"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner" data-name="default"><div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner" data-name="ellipsis"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner" data-name="grid"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div><div class="row text-center"><div class="col-sm"><div class="item" ld="spinner" data-name="hourglass"><div class="lds-hourglass"></div></div></div><div class="col-sm"><div class="item" ld="spinner" data-name="ripple"><div class="lds-ripple"><div></div><div></div></div></div></div><div class="col-sm"><div class="item" ld="spinner" data-name="spinner"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div><script type="text/javascript" src="assets/lib/@loadingio/ldquery/main/ldq.min.js"></script><script type="text/javascript" src="assets/lib/proxise/main/proxise.min.js"></script><script type="text/javascript" src="assets/lib/@plotdb/rescope/main/rescope.min.js"></script><script type="text/javascript" src="assets/lib/@plotdb/csscope/main/csscope.min.js"></script><script type="text/javascript" src="assets/lib/@plotdb/block/main/block.min.js"></script><script type="text/javascript" src="assets/lib/ldview/main/index.min.js"></script><script type="text/javascript" src="assets/lib/ldcolor/main/ldcolor.min.js"></script><script type="text/javascript" src="assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.js"></script><script type="text/javascript" src="assets/lib/ldcover/main/ldcv.min.js"></script><script type="text/javascript" src="assets/lib/ldslider/main/ldrs.min.js"></script><script>(function(it){
+  return it.apply({});
+})(function(){
+  var mgr, this$ = this;
+  mgr = new block.manager({
+    registry: function(arg$){
+      var name, version, path, type;
+      name = arg$.name, version = arg$.version, path = arg$.path, type = arg$.type;
+      return "/assets/lib/@loadingio/css-spinner/dev/entries/" + name + "/" + path;
     }
   });
-  return view.render();
+  return mgr.init().then(function(){
+    var view;
+    view = new ldview({
+      root: document.body,
+      initRender: false,
+      action: {
+        click: {
+          spinner: function(arg$){
+            var node, name;
+            node = arg$.node;
+            name = node.getAttribute('data-name');
+            return this$.ldcv.toggle(true).then(function(){
+              return mgr.get({
+                name: name,
+                version: 'master',
+                path: 'index.html'
+              });
+            }).then(function(bc){
+              return bc.create({});
+            }).then(function(bi){
+              var root;
+              if (this$.bi) {
+                this$.bi.detach();
+              }
+              this$.bi = bi;
+              root = view.get('preview');
+              root.innHTML = '';
+              return bi.attach({
+                root: view.get('preview')
+              });
+            });
+          }
+        }
+      },
+      init: {
+        color: function(arg$){
+          var node, ldcp;
+          node = arg$.node;
+          ldcp = new ldcolorpicker(node);
+          ldcp.on('change', function(it){
+            node.style.background = ldcolor.web(it);
+            return view.get('gallery').style.color = ldcolor.web(it);
+          });
+          return node.style.background = ldcolor.web(ldcp.getColor());
+        },
+        slider: function(arg$){
+          var node, ldrs;
+          node = arg$.node;
+          ldrs = new ldslider({
+            root: node,
+            min: 0.1,
+            max: 1,
+            step: 0.01,
+            from: 1
+          });
+          return ldrs.on('change', function(v){
+            return view.getAll('spinner').map(function(it){
+              return it.style.transform = "scale(" + v + ")";
+            });
+          });
+        }
+      },
+      handler: {
+        colorbox: function(){},
+        gallery: function(){}
+      }
+    });
+    view.render();
+    return this$.ldcv = new ldcover({
+      root: view.get('ldcv')
+    });
+  });
 });</script></body></html>
