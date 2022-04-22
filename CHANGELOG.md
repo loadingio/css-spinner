@@ -1,5 +1,10 @@
 # Change Logs
 
+# v2.0.2
+
+ - fix blinking issue of `ripple` spinner in mobile Safari
+
+
 # v2.0.1
 
  - add missing `vars.styl` and ensure build pass
