@@ -1,12 +1,14 @@
 doctype html
 html
-  include @/@loadingio/bootstrap.ext/dist/index.pug
+  include @/@loadingio/bootstrap.ext/index.pug
   head
-    +css("assets/lib/bootstrap/main/css/bootstrap.min.css")
-    +css("assets/lib/@loadingio/css-spinner/dev/index.css")
-    +css("assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.css")
-    +css("assets/lib/ldslider/main/ldrs.min.css")
-    +css("assets/lib/ldcover/main/ldcv.min.css")
+    +css([
+      {name: "bootstrap", path: "dist/css/bootstrap.min.css"},
+      {name: "@loadingio/css-spinner", version: "dev"},
+      {name: "@loadingio/ldcolorpicker"},
+      {name: "ldslider"},
+      {name: "ldcover"}
+    ])
     style: :stylus
       html,body
         width: 100%
@@ -50,14 +52,16 @@ html
         .col-sm: .item(ld="spinner",data-name="hourglass"): +lds-hourglass
         .col-sm: .item(ld="spinner",data-name="ripple"): +lds-ripple
         .col-sm: .item(ld="spinner",data-name="spinner"): +lds-spinner
-    +script("assets/lib/@loadingio/ldquery/main/ldq.min.js")
-    +script("assets/lib/proxise/main/proxise.min.js")
-    +script("assets/lib/@plotdb/rescope/main/rescope.min.js")
-    +script("assets/lib/@plotdb/csscope/main/csscope.min.js")
-    +script("assets/lib/@plotdb/block/main/block.min.js")
-    +script("assets/lib/ldview/main/index.min.js")
-    +script("assets/lib/ldcolor/main/ldcolor.min.js")
-    +script("assets/lib/@loadingio/ldcolorpicker/main/ldcp.min.js")
-    +script("assets/lib/ldcover/main/ldcv.min.js")
-    +script("assets/lib/ldslider/main/ldrs.min.js")
-    script: include:lsc index.ls
+    +script([
+      {name: "@loadingio/ldquery"},
+      {name: "proxise"},
+      {name: "@plotdb/rescope"},
+      {name: "@plotdb/csscope"},
+      {name: "@plotdb/block"},
+      {name: "ldview"},
+      {name: "ldcolor"},
+      {name: "@loadingio/ldcolorpicker"},
+      {name: "ldcover"},
+      {name: "ldslider"}
+    ])
+    script(type="module"): include:lsc index.ls
