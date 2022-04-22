@@ -3,7 +3,7 @@
   "name": "@loadingio/css-spinner",
   "license": "CC0-1.0",
   "description": "Pure CSS Loader Optimized for the Web",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "style": "dist/index.min.css",
   "homepage": "https://loading.io/css/",
   "files": [
