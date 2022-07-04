@@ -1,5 +1,11 @@
 # Change Logs
 
+# v2.0.3
+
+ - replace `colors` with `@plotdb/color`
+ - upgrade some devDependencies
+
+
 # v2.0.2
 
  - fix blinking issue of `ripple` spinner in mobile Safari

@@ -1,4 +1,4 @@
-require! <[fs fs-extra path progress colors stylus pug uglifycss]>
+require! <[fs fs-extra path progress @plotdb/colors stylus pug uglifycss]>
 
 weblib = "web/static/assets/lib/@loadingio/css-spinner/dev"
 fs-extra.ensure-dir-sync weblib
