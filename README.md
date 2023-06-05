@@ -1,62 +1,59 @@
 # css-spinner
 
-[Live Demo](https://loading.io/css/)
+[Démonstration en direct](https://loading.io/css/)
 
-Collection of 12 small, elegant pure css spinners for your website's loading animation.
+Collection de 12 petites animations de chargement élégantes en CSS pur pour l'animation de chargement de votre site web.
 
 ![css spinner](https://raw.githubusercontent.com/loadingio/css-spinner/master/web/static/thumbnail.gif)
 
 
-## Features
+## Caractéristiques
 
- * vanilla - no external dependency and no additional library required.
- * standalone - use any of them separately.
- * customizable - use Stylus variables to quickly customize them to fit your needs.
- * easy to use - simply copy & paste while also easy to use with pug mixins.
- * small - average size 1K per spinner unminimized, unzipped
+* Vanilla - aucune dépendance externe et aucune bibliothèque supplémentaire requise.
+* Autonome - utilisez-les séparément.
+* Personnalisable - utilisez les variables Stylus pour les personnaliser rapidement en fonction de vos besoins.
+* Facile à utiliser - copiez-collez simplement, et facile à utiliser avec des mixins pug.
+* Léger - taille moyenne de 1 Ko par spinner non minifié, non compressé.
 
-## Usage
+## Utilisation
 
-[loading.io](https://loading.io/) provides a [web interface](https://loading.io/css/) to quickly choose and copy your desired spinners, yet you can still find the source code in this repository. The basic usage is as:
+[loading.io](https://loading.io/) propose une [interface web](https://loading.io/css/) pour choisir rapidement et copier les spinners souhaités, mais vous pouvez toujours trouver le code source dans ce référentiel. L'utilisation de base est la suivante :
 
-1. Find and download the html files of desired loader under [dist](https://github.com/loadingio/css-spinner/tree/master/dist/) folder.
-2. Copy its content to the place you want to use this loader.
+1. Trouvez et téléchargez les fichiers HTML du loader souhaité dans le dossier [dist](https://github.com/loadingio/css-spinner/tree/master/dist/).
+2. Copiez le contenu dans l'endroit où vous souhaitez utiliser ce loader.
 
-Separated CSS and HTML files are also available under [build](https://github.com/loadingio/css-spinner/tree/master/dist/entries) folder for reusing CSS codes to reduce payload size.
+Des fichiers CSS et HTML séparés sont également disponibles dans le dossier [build](https://github.com/loadingio/css-spinner/tree/master/dist/entries) pour réutiliser les codes CSS et réduire la taille de la charge utile.
 
-We also provide stylus and pug source files for better integrating these spinners into your project. Find corresponding stylus and pug files for your desired spinners under [src/](https://github.com/loadingio/css-spinner/tree/master/src) folders.
+Nous fournissons également des fichiers source Stylus et pug pour intégrer ces spinners plus facilement dans votre projet. Trouvez les fichiers Stylus et pug correspondants pour les spinners souhaités dans les dossiers [src/](https://github.com/loadingio/css-spinner/tree/master/src).
 
-To use stylus files alone, you will have to provide variables listed in [vars.styl](https://github.com/loadingio/css-spinner/blob/master/vars.styl).
+Pour utiliser uniquement les fichiers Stylus, vous devrez fournir les variables répertoriées dans [vars.styl](https://github.com/loadingio/css-spinner/blob/master/vars.styl).
 
-## npm package
+## Package npm
 
-This module is also released through npm as [@loadingio/css-spinner](https://www.npmjs.com/package/@loadingio/css-spinner).
-
-
-## Build
-
-You can also customize all these loaders by building them yourself.
-
- * First, update `vars.styl` based on your needs.
- * make sure required packages are installed by `npm install`. You will need NPM / NodeJS pre-installed.
- * build with this command: `npm run build`
-   - generated files will be in `dist/` folder.
+Ce module est également disponible via npm sous le nom [@loadingio/css-spinner](https://www.npmjs.com/package/@loadingio/css-spinner).
 
 
-## Browser Compatibility
+## Compilation
 
-These spinners use CSS Animation and Transformation which is widely supported by major modern browsers except IE<=9.  To support older browsers like IE9, please use [loading.io](https://loading.io/animation/icon/) to generate alternative GIF Loaders instead.
+Vous pouvez également personnaliser tous ces loaders en les compilant vous-même.
 
-
-
-## License
-
-All loader files here are released under CC0 License. However, you could attribute to this link: [loading.io css spinner ( https://loading.io/css/ )](https://loading.io/css/) to give loading.io a thumbs-up.
-
-Other source codes are released under MIT License.
+* Tout d'abord, mettez à jour `vars.styl` en fonction de vos besoins.
+* Assurez-vous que les packages requis sont installés avec `npm install`. Vous devez avoir NPM / NodeJS préinstallé.
+* Compilez avec la commande suivante : `npm run build`
+   - Les fichiers générés se trouveront dans le dossier `dist/`.
 
 
-## Other Resources
+## Compatibilité des navigateurs
 
-If you want to make custom css loading animation, loading.io also provides [loading.css](https://loading.io/animation/) - A pure CSS loading animation library, and a [helper GIF builder](https://loading.io/animation/icon/). Don't forget to check it out and share your customized loader with us!
+Ces spinners utilisent les animations et les transformations CSS, largement pris en charge par les principaux navigateurs modernes, à l'exception de IE<=9. Pour prendre en charge les anciens navigateurs tels que IE9, veuillez utiliser [loading.io](https://loading.io/animation/icon/) pour générer des chargeurs GIF alternatifs.
 
+## Licence
+
+Tous les fichiers de loader ici sont publiés sous la licence CC0. Cependant, vous pouvez mentionner ce lien : [loading.io css spinner ( https://loading.io/css/ )](https://loading.io/css/) pour montrer votre soutien à loading.io.
+
+Les autres codes source sont publiés sous la licence MIT.
+
+
+## Autres ressources
+
+Si vous souhaitez créer une animation de chargement personnalisée en CSS, loading.io propose également [loading.css](https://loading.io/animation/) - une bibliothèque d'animation de chargement en CSS pur, ainsi qu'un [constructeur GIF d'aide](https://loading.io/animation/icon/). N'oubliez pas de le consulter et de partager vos loaders personnalisés avec nous !
